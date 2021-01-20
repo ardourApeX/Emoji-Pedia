@@ -1,4 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+:root {
+  --deep-aqua: #003b46;
+  --ocean: #07575b;
+  --wave: #66a5ad;
+  --seafoam: #c4dfe6;
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
   font-family: sans-serif;
+}
+body {
+  background-color: var(--deep-aqua);
+}
+.center-container {
   text-align: center;
+}
+#Heading {
+  color: var(--deep-aqua);
+  border: 2px solid var(--seafoam);
+  background-color: var(--seafoam);
+  max-width: 100%;
+  height: 5rem;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 1rem;
+  border-bottom-left-radius: 12rem;
+  border-bottom-right-radius: 12rem;
+  text-align: center;
+}
+#Wallpaper {
+  max-width: 450px;
+  display: block;
+  margin: auto;
+}
+#Suggestion {
+  font-family: "Satisfy", cursive;
+  font-weight: lighter;
+  color: var(--seafoam);
+  display: block;
+  position: static;
+}
+#div-emoji {
+  position: absolute;
+  right: 0;
+}
+#Emojis {
+  font-size: 3rem;
+  padding: 0px 5px;
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+  margin-top: 2rem;
+}
+#Emojis:hover {
+  font-size: 4rem;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+input {
+  width: 30rem;
+  height: 3rem;
+  background-color: rgba(255, 228, 196, 0.699);
+  padding: 1rem;
+  top: 70%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, 0);
+  display: inline-block;
+  margin: 0 auto;
+}
+#output-text {
+  font-family: "Satisfy", cursive;
+  font-weight: lighter;
+  color: var(--seafoam);
+  margin-top: 6rem;
+  text-align: center;
+}
+#output-text span {
+  color: white;
+}
+#output-meaning {
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
