@@ -39,35 +39,36 @@ export default function App() {
   }
   //Function to handle CLICKED EMOJIS
   function emojiClickHandler(emoji) {
+    // console.log(emoji);
     setMeaning(emojiDatabase[emoji]);
   }
   return (
-    <div className="App">
-      <h1 id="Heading">Emoji-Encylopedia</h1>
-      <img id="Wallpaper" src={bg} alt="Wallpaper"></img>
-      <div className="center-container">
-        <h2 id="Suggestion"> Suggestions</h2>
+    <div>
+      <div>
+        <h1 id="Heading">Emoji-Encylopedia</h1>
+        <img id="Wallpaper" src={bg} alt="Wallpaper"></img>
+        <input
+          placeholder="Place your emoji here..."
+          onChange={onchangeHandler}
+        ></input>
+      </div>
+      <div id="div2">
+        <h2 id="Suggestion">Suggestions</h2>
         {suggestions.map(function (emoji) {
           return (
             <span
+              id="Emojis"
               onClick={() => emojiClickHandler(emoji)}
               key={emoji}
-              id="Emojis"
             >
               {emoji}
             </span>
           );
         })}
       </div>
-      <div>
-        <input
-          placeholder="Place your emoji here..."
-          onChange={onchangeHandler}
-        ></input>
-      </div>
+      <div></div>
       <h2 id="output-text">
-        According to Emoji-pedia it means:{" "}
-        <span id="output-meaning">{meaning}</span>
+        According to Emoji-pedia it means: <span>{meaning}</span>
       </h2>
     </div>
   );
